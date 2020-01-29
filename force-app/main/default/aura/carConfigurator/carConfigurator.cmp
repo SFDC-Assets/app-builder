@@ -10,7 +10,7 @@
 
     <force:recordData aura:id="recordEdit" layoutType="FULL" recordId="{!v.recordId}" targetError="{!v.recordError}" targetRecord="{!v.record}" targetFields="{!v.simpleRecord}" recordUpdated="{!c.recordLoaded}" mode="EDIT" />
 
-    <div>
+    <div class="slds-box">
         <div aura:id="photoWrapper" id="photoWrapper">
             <div class="slds-grid slds-p-bottom_xx-small">
                 <div class="slds-col slds-size_1-of-3 slds-p-around_xx-small">
