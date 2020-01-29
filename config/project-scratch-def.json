@@ -5,6 +5,9 @@
   "settings": {
     "mobileSettings": {
       "enableLightningOnMobile": true
-    }
+    },
+    "pathAssistantSettings": {
+      "pathAssistantEnabled": true
+    }    
   }
 }
