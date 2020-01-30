@@ -17,7 +17,7 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>showPaymentType</targetReference>
+                <targetReference>requestPriceScreen</targetReference>
             </connector>
             <label>Evaluation</label>
         </rules>
@@ -95,7 +95,7 @@
     <recordUpdates>
         <name>updateVehicle</name>
         <label>Update vehicle</label>
-        <locationX>661</locationX>
+        <locationX>807</locationX>
         <locationY>473</locationY>
         <connector>
             <targetReference>successScreen</targetReference>
@@ -122,10 +122,36 @@
         <object>Vehicle__c</object>
     </recordUpdates>
     <screens>
+        <name>requestPriceScreen</name>
+        <label>Get price quote</label>
+        <locationX>628</locationX>
+        <locationY>236</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>showPaymentType</targetReference>
+        </connector>
+        <fields>
+            <name>getPriceButton</name>
+            <extensionName>c:FlowNextButton</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>label</name>
+                <value>
+                    <stringValue>Get Price Quote</stringValue>
+                </value>
+            </inputParameters>
+            <isRequired>true</isRequired>
+        </fields>
+        <showFooter>false</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
         <name>showPaymentType</name>
         <label>Select payment type</label>
-        <locationX>663</locationX>
-        <locationY>245</locationY>
+        <locationX>807</locationX>
+        <locationY>236</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
@@ -158,9 +184,9 @@
         <label>Success</label>
         <locationX>219</locationX>
         <locationY>473</locationY>
-        <allowBack>true</allowBack>
+        <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
-        <allowPause>true</allowPause>
+        <allowPause>false</allowPause>
         <fields>
             <name>showPrice2</name>
             <fieldText>&lt;p&gt;&lt;span style=&quot;color: rgb(62, 62, 60); background-color: rgb(255, 255, 255);&quot;&gt;Sale Price: {!currencyPrice}&lt;/span&gt;&lt;/p&gt;</fieldText>
@@ -171,7 +197,7 @@
             <fieldText>&lt;p&gt;Order generated!&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
-        <showFooter>false</showFooter>
+        <showFooter>true</showFooter>
         <showHeader>true</showHeader>
     </screens>
     <start>
