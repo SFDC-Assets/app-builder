@@ -3,9 +3,6 @@
   "edition": "Developer",
   "features": [],
   "settings": {
-    "mobileSettings": {
-      "enableLightningOnMobile": true
-    },
     "pathAssistantSettings": {
       "pathAssistantEnabled": true
     }    
