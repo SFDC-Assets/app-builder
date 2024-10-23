@@ -1,4 +1,4 @@
-sf demoutil org create scratch -f config/project-scratch-def.json -d 3 -s -w 60
+sf demoutil org create scratch -f config/project-scratch-def.json -d 3 -s
 
 sf project deploy start
 sf org assign permset -n AppBuilder
